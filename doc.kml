@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>CLUBES FUTSAL AFA ARGENTINA</name>
+    <description/>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-1.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>images/icon-1.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Clubes 1° A Futsal AFA</name>
+      <Placemark>
+        <name>Club Cultural y Deportivo 17 de Agosto</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.5105914,-34.5777909,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Club Kimberley</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.5051571,-34.6039263,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Club Social y Deportivo América del Sud</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.4731443,-34.6441473,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Club Jorge Newbery</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.5245737,-34.6222552,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Club Social y Deportivo Pinocho</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.4916825,-34.5646546,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Club Ferro Carril Oeste</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.4462119,-34.6195047,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Centro Deportivo Racing Club</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3703633,-34.6689379,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Polideportivo Arquitecto Roberto Pando</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.4223166,-34.6349435,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Club Secla</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3589505,-34.6658107,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hebraica Sede Pilar</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.8830428,-34.4525902,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Alvear Club</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.4817994,-34.6426726,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Polideportivo Benito Quinquela Martín</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3655086,-34.631125,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Villa Modelo</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.3779352,-34.6816498,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Clubes 1° B Futsal AFA</name>
+      <Placemark>
+        <name>Estadio del Club Deportivo Metalurgíco</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.7767307,-34.4692474,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Alvear Club</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -58.4817994,-34.6426726,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
