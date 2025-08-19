@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>ClubFinder</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-      }
-      header {
-        background: #2c3e50;
-        color: white;
-        padding: 10px;
-      }
-      iframe {
-        width: 100%;
-        height: 90vh;
-        border: none;
-      }
-    </style>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#2c3e50">
-<!-- Leaflet CSS & JS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>ClubFinder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2c3e50">
 
-<!-- Omnivore plugin -->
-<script src="https://unpkg.com/leaflet-omnivore/leaflet-omnivore.min.js"></script>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-  </head>
-  <body>
-    <header>
-      <h2>ClubFinder - Mapa de Clubes</h2>
-      <p>Filtrá las capas directamente desde el mapa de Google My Maps</p>
-    </header>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    #map {
+      width: 100%;
+      height: 90vh;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>ClubFinder - Mapa de Clubes</h2>
+    <p>Visualizá los clubes directamente en el mapa interactivo</p>
+  </header>
 
-    <!-- Acá va el mapa de My Maps embebido -->
-    <iframe 
-      src="https://www.google.com/maps/d/embed?mid=1CYrhWn5RstgI_QQCLxi6sFFJ5GdPj4w&z=10"
-      allowfullscreen>
-    </iframe>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <div id="map"></div>
+
+  <!-- Leaflet JS & Omnivore plugin -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet-omnivore/leaflet-omnivore.min.js"></script>
 
   <script>
-    var map = L.map('map').setView([-34.6037, -58.3816], 10); // Buenos Aires
+    // Inicializar el mapa centrado en Buenos Aires
+    var map = L.map('map').setView([-34.6037, -58.3816], 10);
 
+    // Capa base de OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
+    // Cargar el archivo KML
     omnivore.kml('CLUBES_FUTSAL_AFA_ARGENTINA.kml')
       .on('ready', function () {
         map.fitBounds(this.getBounds());
       })
       .addTo(map);
   </script>
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js")
-      .then(() => console.log("Service Worker registrado"))
-      .catch(err => console.error("Error registrando Service Worker:", err));
-  }
-</script>
 
-  </body>
+  <!-- Service Worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(() => console.log("Service Worker registrado"))
+        .catch(err => console.error("Error registrando Service Worker:", err));
+    }
+  </script>
+</body>
 </html>
