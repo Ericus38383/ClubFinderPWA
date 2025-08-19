@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>ClubFinder</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      header {
+        background: #2c3e50;
+        color: white;
+        padding: 10px;
+      }
+      iframe {
+        width: 100%;
+        height: 90vh;
+        border: none;
+      }
+    </style>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2c3e50">
+  </head>
+  <body>
+    <header>
+      <h2>ClubFinder - Mapa de Clubes</h2>
+      <p>Filtrá las capas directamente desde el mapa de Google My Maps</p>
+    </header>
+
+    <!-- Acá va el mapa de My Maps embebido -->
+    <iframe 
+      src="https://www.google.com/maps/d/embed?mid=1CYrhWn5RstgI_QQCLxi6sFFJ5GdPj4w&z=10"
+      allowfullscreen>
+    </iframe>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("Service Worker registrado"))
+      .catch(err => console.error("Error registrando Service Worker:", err));
+  }
+</script>
+
+  </body>
+</html>
