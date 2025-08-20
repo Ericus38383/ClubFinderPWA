@@ -35,8 +35,9 @@
 
   <div id="map"></div>
 
-  <!-- Leaflet JS -->
+  <!-- Leaflet JS & Omnivore plugin -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-omnivore/leaflet-omnivore.min.js"></script>
 
   <script>
     // Inicializar el mapa centrado en Buenos Aires
@@ -47,19 +48,12 @@
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    // Cargar archivo GeoJSON
-    fetch('doc.geojson')
-      .then(res => res.json())
-      .then(data => {
-        L.geoJSON(data, {
-          onEachFeature: function (feature, layer) {
-            let nombre = feature.properties.name || "Club sin nombre";
-            let descripcion = feature.properties.description || "";
-            layer.bindPopup(`<strong>${nombre}</strong><br>${descripcion}`);
-          }
-        }).addTo(map);
+    // Cargar el archivo KML
+    omnivore.kml('doc.kml')
+      .on('ready', function () {
+        map.fitBounds(this.getBounds());
       })
-      .catch(err => console.error("Error cargando GeoJSON:", err));
+      .addTo(map);
   </script>
 
   <!-- Service Worker -->
